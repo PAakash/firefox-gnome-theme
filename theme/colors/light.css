@@ -85,10 +85,11 @@
 	
 	/* Header bar */
 	--gnome-headerbar-background: #ffffff;
-	--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.12);
+	--gnome-headerbar-shade-color: rgba(0, 0, 0, 0.07);
 
 	/* Toolbars */
 	--gnome-toolbar-background: var(--gnome-headerbar-background);
+	--gnome-toolbar-color: var(--gnome-window-color);
 	--gnome-toolbar-border-color: var(--gnome-headerbar-shade-color);
 	--gnome-toolbar-icon-fill: #2f2f2f;
 	
@@ -122,7 +123,7 @@
 	--gnome-tabbar-tab-active-background: #ebebeb; /* Hardcoded color */
 	--gnome-tabbar-tab-active-background-contrast: #c0c0c0; /* Hardcoded color */
 	--gnome-tabbar-tab-active-hover-background: #e4e4e4; /* Hardcoded color */
-	--gnome-tabbar-tab-needs-attetion: var(--gnome-palette-blue-2);
+	--gnome-tabbar-tab-needs-attetion: var(--gnome-accent);
 	
 	--gnome-tabbar-identity-color-blue: var(--gnome-accent);
 	--gnome-tabbar-identity-color-turquoise: #00c79a;

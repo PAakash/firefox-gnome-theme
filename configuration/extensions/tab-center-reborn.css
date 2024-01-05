@@ -74,7 +74,7 @@ body {
 }
 
 #newtab {
-    width: 95%;
+    display:none;
 }
 
 .tab,
@@ -99,6 +99,7 @@ body {
 #newtab-icon {
     min-width: 16px;
 }
+
 
 /* the @media rule only allows these settings apply when the sidebar is expanded */
 @media (min-width: 49px) {
@@ -156,7 +157,6 @@ body {
     background: var(--identity-color);
     transition: inset .1s;
 }
-
 #tablist .tab.active[data-identity-color] .tab-context::before,
 #pinnedtablist:not(.compact) .tab.active[data-identity-color] .tab-context::before {
     top: 1px;

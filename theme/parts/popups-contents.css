@@ -190,6 +190,7 @@
 
 #permission-popup-permission-list-default-anchor:empty {
 	padding: 0 !important;
+	border: 0 !important;
 }
 .permission-popup-permission-list-anchor[anchorfor="3rdPartyStorage"] {
 	padding: 0 !important;
@@ -223,7 +224,7 @@
 }
 
 #protections-popup-mainView-panel-header {
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 }
 #protections-popup[hasException] #protections-popup-mainView-panel-header {
 	background: none !important;
@@ -251,13 +252,13 @@
 	background-color: var(--gnome-entry-background);
 	border: 0 !important;
 	border-radius: 12px;
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 	height: 100% !important;
 	margin: 0 !important;
 }
 #protections-popup-message .text-link,
 #cfr-protections-panel-link-text {
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 }
 .whatsNew-message-body {
 	padding: 0 6px;

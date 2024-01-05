@@ -13,21 +13,13 @@
     #browser {
         position: relative;
     }
-    
-    #tabbrowser-tabbox {
-        z-index: 0 !important;
-    }
-    
-    #navigator-toolbox {
-        z-index: 10 !important;
-    }
 
     #sidebar-box:not([lwt-sidebar]){
         appearance: unset !important;
     }
 
     #sidebar-box[sidebarcommand*="tabcenter"] {
-        z-index: 1 !important;
+        z-index: 1;
     }
 
     #sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
@@ -49,7 +41,7 @@
         overflow: hidden;
         
         border-right: 1px solid var(--sidebar-border-color);
-        z-index: 1 !important;
+        z-index: 1;
         top: 0;
         bottom: 0;
     }

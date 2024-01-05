@@ -51,8 +51,8 @@ function saveProfile(){
 		echo "No theme set, using default adwaita." >&2
 	else
 		echo "Setting $THEME theme." >&2
-		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userChrome.css
-		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userChrome.css
+		echo "@import \"firefox-gnome-theme/theme/colors/light-$THEME.css\";" >> userChrome.css
+		echo "@import \"firefox-gnome-theme/theme/colors/dark-$THEME.css\";" >> userChrome.css
 	fi
 
 	# Create single-line user content CSS files if non-existent or empty.
@@ -71,8 +71,8 @@ function saveProfile(){
 		echo "No theme set, using default adwaita." >&2
 	else
 		echo "Setting $THEME theme."
-		echo "@import \"firefox-gnome-theme\/theme/colors/light-$THEME.css\";" >> userContent.css
-		echo "@import \"firefox-gnome-theme\/theme/colors/dark-$THEME.css\";" >> userContent.css
+		echo "@import \"firefox-gnome-theme/theme/colors/light-$THEME.css\";" >> userContent.css
+		echo "@import \"firefox-gnome-theme/theme/colors/dark-$THEME.css\";" >> userContent.css
 	fi
 
 	cd ..

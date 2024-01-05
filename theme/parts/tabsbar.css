@@ -38,41 +38,13 @@ tab > stack {
 	--gnome-tabbar-fade-background: var(--gnome-tabbar-background);
 }
 
-#tabbrowser-arrowscrollbox {
-	position: relative !important;
-}
-
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]),
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down {
+#scrollbutton-up,
+#scrollbutton-down {
 	border-top: 0 !important;
-	position: absolute !important;
-	z-index: 5 !important;
-	top: 0;
-	bottom: 0;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"])[disabled],
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down[disabled] {
-	display: none;
-}
-
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]) > .toolbarbutton-icon,
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down > .toolbarbutton-icon{
-	visibility: hidden;
-}
-
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down {
-	right: 0;
-	margin-right: -5px !important;
-}
-
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]) {
-	left: 0;
-	margin-left: -5px !important;
-}
-
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]):not([disabled])::after,
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
+#scrollbutton-up:not([disabled])::after,
+#scrollbutton-down:not([disabled])::after {
 	content: "";
 	height: 39px;
 	position: absolute;
@@ -82,13 +54,13 @@ tab > stack {
 	pointer-events: none;
 }
 
-#scrollbutton-up:has(~ .scrollbox-clip[orient="horizontal"]):not([disabled])::after {
-	background: linear-gradient(to right, var(--gnome-tabbar-fade-background) 10px, transparent);
+#scrollbutton-up:not([disabled])::after {
+	background: linear-gradient(to right, var(--gnome-tabbar-fade-background) 25px, transparent);
 	left: 0;
 	
 }
-.scrollbox-clip[orient="horizontal"] ~ #scrollbutton-down:not([disabled])::after {
-	background: linear-gradient(to left, var(--gnome-tabbar-fade-background) 10px, transparent);
+#scrollbutton-down:not([disabled])::after {
+	background: linear-gradient(to left, var(--gnome-tabbar-fade-background) 25px, transparent);
 	right: 0;
 }
 
@@ -96,6 +68,11 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 	width: 0 !important;
 	border: 0 !important;
 	margin-inline: 0 !important;
+}
+
+#scrollbutton-up, #scrollbutton-down {
+	position: relative !important;
+	z-index: 5 !important;
 }
 
 /* Remove spacing between pinned tabs and first tab */
@@ -198,7 +175,7 @@ spacer[part=overflow-start-indicator], spacer[part=overflow-end-indicator] {
 
 /* Tab labels */
 tab {
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 	font-family: Cantarell, inherit;
 	font-weight: normal;
 	font-size: 1em;
@@ -331,7 +308,7 @@ tab {
 /* Close tab button */
 .tab-close-button {
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	fill: var(--gnome-window-color) !important;
+	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
 	-moz-context-properties: fill, fill-opacity !important;
 	height: 16px !important;
@@ -473,23 +450,11 @@ tab {
 }
 
 /* Needs attetion tab indicator */
-.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content,
-.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged] {
-  background-size: 0px 0px !important;
-	background-position: center bottom !important;
-  transition-property: background-size;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected]),
-.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected]) {
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected="true"]),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected="true"]) {
 	background-image: radial-gradient(var(--gnome-tabbar-tab-needs-attetion), var(--gnome-tabbar-tab-needs-attetion) 10px) !important;
-	background-size: clamp(20%, 50%, 7rem) 2px !important;
-}
-
-.tab-label[attention]:not([selected]) {
-  font-weight: normal !important;
+	background-position: center bottom !important;
+	background-size: 14px 2px !important;
 }
 
 /* Tab spinner */

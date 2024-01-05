@@ -5,7 +5,7 @@
 /* Style menus */
 menupopup {
 	-moz-appearance: none !important;	
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 	padding: 8px !important;
 }
 
@@ -46,10 +46,6 @@ menuitem[type="checkbox"] image, menuitem[type="radio"] image {
 }
 menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
 	background: transparent !important;
-}
-
-.menu-iconic-icon {
-  padding: 0 !important;
 }
 
 /* Adjust popovers position */
@@ -132,7 +128,7 @@ panel  {
 	background: var(--arrowpanel-background) !important;
 	border: 1px solid var(--gnome-menu-border-color) !important;
 	border-radius: 12px !important;
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 }
 .panel-arrow {    
 	fill: var(--arrowpanel-background) !important;
@@ -187,7 +183,7 @@ panelview .unified-extensions-item-action-button,
 #downloadsPanel-mainView .download-state {
 	-moz-appearance: none !important;
 	border-radius: 6px !important;	
-	color: var(--gnome-window-color) !important;
+	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
 	padding: 4px 12px !important;
 	min-height: 32px !important;
@@ -204,8 +200,7 @@ panelview .unified-extensions-item {
 }
 
 .subviewbutton[shortcut]:after {
- 	opacity: 0.5 !important;
-  color: var(--gnome-menu-color) !important;
+	opacity: 0.5 !important;
 }
 
 .bookmark-item .menu-right {

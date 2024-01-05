@@ -8,7 +8,7 @@
 	:root {
 		/* Accent */
 		--gnome-accent-bg: var(--gnome-palette-blue-3);
-		--gnome-accent: #282a36; /* 78aeed */
+		--gnome-accent: #282a36;
 
 		--gnome-toolbar-star-button: var(--gnome-palette-yellow-1);
 
